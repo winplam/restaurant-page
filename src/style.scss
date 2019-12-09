@@ -30,6 +30,7 @@ input {
   width: 100px;
   position: absolute;
   left: 0px;
+  transition: 100ms;
 
   &:nth-child(1) {
     top: -16px;
