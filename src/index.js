@@ -67,8 +67,8 @@ createContent('.tab-content', 'map-container', ''
 const tabEvents = (() => {
     const tabs = document.querySelectorAll('.tab');
     const highLightTab = (tabID) => {
-        tabs.forEach(tab => tab.classList.remove('selectedTab'));
-        document.getElementById(tabID).classList.add('selectedTab');
+        tabs.forEach(tab => tab.classList.remove('selected-tab'));
+        document.getElementById(tabID).classList.add('selected-tab');
     };
     tabs.forEach(element => element
         .addEventListener('click', event => {

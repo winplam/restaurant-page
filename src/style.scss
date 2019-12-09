@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #F8FFE5 url("../dist/img/restaurant-background.jpg");
+  background: #F8FFE5 url("img/restaurant-background.jpg");
 }
 
 #content {
@@ -52,12 +52,28 @@ input {
   }
 }
 
-.selectedTab {
+.tab:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.1em;
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.tab:active {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
   font-weight: 600;
   font-size: 1.05em;
   transform: scale(1.01);
-  z-index: 10;
+  z-index: 5;
+}
+
+.selected-tab {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.05em;
+  transform: scale(1.01);
+  z-index: 5;
 }
 
 .cube {
