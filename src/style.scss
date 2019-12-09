@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F8FFE5 url("../dist/img/restaurant-background.jpg");
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  perspective: 1000px;
+  perspective-origin: 50% 50px;
+}
+
+input {
+  display: none;
+}
+
+.tab {
+  font-weight: 300;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+
+  &:nth-child(1) {
+    top: -16px;
+    background: #06D6A0;
+  }
+
+  &:nth-child(2) {
+    top: 54px;
+    background: #6F47EF;
+  }
+
+  &:nth-child(3) {
+    top: 124px;
+    background: #1B9AAA;
+  }
+
+  &:nth-child(4) {
+    top: 194px;
+    background: #EF476F;
+  }
+}
+
+.selectedTab {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.05em;
+  transform: scale(1.01);
+  z-index: 10;
+}
+
+.cube {
+  margin: 60px auto 0;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-origin: 0 250px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+}
+
+.tab-content {
+  padding: 25px;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+
+  h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    margin: 0 0 5px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  &:nth-child(1) {
+    transform: rotateX(-270deg) translateY(-250px);
+    transform-origin: top;
+    background: #06D6A0;
+  }
+
+  &:nth-child(2) {
+    transform: translateZ(250px);
+    background: #6F47EF;
+  }
+
+  &:nth-child(3) {
+    transform: rotateX(-90deg) translateY(250px);
+    transform-origin: bottom;
+    background: #1B9AAA;
+  }
+
+  &:nth-child(4) {
+    transform: rotateX(180deg) translateZ(250px);
+    transform-origin: center;
+    background: #EF476F;
+  }
+}
+
+#tab-top:checked ~ .cube {
+  transform: rotateX(-90deg);
+}
+
+#tab-front:checked ~ .cube {
+  transform: rotateX(0deg);
+}
+
+#tab-bottom:checked ~ .cube {
+  transform: rotateX(90deg);
+}
+
+#tab-back:checked ~ .cube {
+  transform: rotateX(180deg);
+}
+
+img {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#about-img {
+  border: 5px solid #476FEF;
+  margin-top: 15px;
+}
+
+#home-img {
+  margin-top: 20px;
+  border: 5px solid #EF6F47;
+}
+
+.menu-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-img:nth-child(3), .menu-img:last-child {
+  margin-top: 10px;
+}
+
+.menu-img {
+  border: 5px solid #06D6A0;
+}
+
+.map-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-img {
+  border: 5px solid #476FEF;
+}
+
+#contact-page {
+  margin: 0 auto;
+}
