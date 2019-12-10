@@ -25,7 +25,8 @@ input {
   height: 70px;
   width: 100px;
   position: absolute;
-  left: 0px; }
+  left: 0px;
+  transition: 100ms; }
   .tab:nth-child(1) {
     top: -16px;
     background: #06D6A0; }
@@ -40,24 +41,20 @@ input {
     background: #EF476F; }
 
 .tab:hover {
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
   font-weight: 600;
-  font-size: 1.1em;
-  transform: scale(1.1);
+  font-size: 1.05em;
+  transform: scale(1.01);
   z-index: 10; }
 
-.tab:active {
+.tab:active, .selected-tab {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
   font-weight: 600;
   font-size: 1.05em;
   transform: scale(1.01);
   z-index: 5; }
 
-.selected-tab {
-  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
-  font-weight: 600;
-  font-size: 1.05em;
-  transform: scale(1.01);
+.tab:active {
   z-index: 5; }
 
 .cube {
@@ -69,12 +66,14 @@ input {
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in; }
 
+.cube-active {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75); }
+
 .tab-content {
   padding: 25px;
   width: 500px;
   height: 500px;
-  position: absolute;
-  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75); }
+  position: absolute; }
   .tab-content h1 {
     font-family: 'Pacifico', cursive;
     font-size: 25px;
