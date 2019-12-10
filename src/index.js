@@ -25,7 +25,8 @@ createContent('.cube', 'tab-content', '', ['h1', '', 'Le Gourmet Virtuel French 
     , ['p', '', 'Bienvenue! Le Gourmet Virtuel, voted The Odin Projects’s best virtual restaurant year after year, welcomes you for breakfast, lunch, or dinner at our casual, ocean view restaurant at the city of your choice. Part restaurant, part wine boutique, part French Bakery, Le Gourmet Virtuel combines the elegance of an old world café with the casual ambiance of a neighborhood eatery. It’s sunlit space is perfect for an early morning espresso with a croissant or a leisurely lunch of shared dishes.']
     , ['img', '', {src: 'img/home.jpg', alt: 'French Menu Item #0', width: '450px', id: 'home-img'}]
 );
-document.getElementById('home-btn').classList.add('selectedTab');
+document.getElementById('home-btn').classList.add('selected-tab');
+document.querySelectorAll('.tab-content')[1].classList.add('cube-active');
 
 // Create Menu page
 createContent('.cube', 'tab-content', 'menu', ['h1', {id: 'le-menu'}, 'Le Menu']);
@@ -66,9 +67,14 @@ createContent('.tab-content', 'map-container', ''
 // Add effects to tab changes
 const tabEvents = (() => {
     const tabs = document.querySelectorAll('.tab');
+    const cubes = document.querySelectorAll('.tab-content');
     const highLightTab = (tabID) => {
         tabs.forEach(tab => tab.classList.remove('selected-tab'));
         document.getElementById(tabID).classList.add('selected-tab');
+    };
+    const highLightSquare = (childNumber) => {
+        cubes.forEach(square => square.classList.remove('cube-active'));
+        cubes[childNumber].classList.add('cube-active');
     };
     tabs.forEach(element => element
         .addEventListener('click', event => {
@@ -78,29 +84,20 @@ const tabEvents = (() => {
         switch (tabID) {
             case 'about-btn':
                 highLightTab(tabID);
+                highLightSquare(0);
                 break;
             case 'home-btn':
                 highLightTab(tabID);
+                highLightSquare(1);
                 break;
             case 'menu-btn':
                 highLightTab(tabID);
+                highLightSquare(2);
                 break;
             case 'contact-btn':
                 highLightTab(tabID);
+                highLightSquare(3);
                 break;
         }
     }
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
