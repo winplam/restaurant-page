@@ -4,7 +4,7 @@ The index.html contains almost nothing inside the body tag except for an empty D
 The methods for generating the HTML is stored in the rendPage.js file and the parameters for supplying the data attributes were stored in index.js.
 Webpak dev server was used to compile to source code into a main.js file in the dist folder.
 
-### [View in Browser](https://winplam.github.io/tic-tac-toe/)
+### [View in Browser](https://winplam.github.io/restaurant-page/)
 
 The funniest part of this exercise was making a 3D rotating cube to transition better the different pages.
 Essentially this cube was originally designed to be a rotating menu with only 3 sides.
