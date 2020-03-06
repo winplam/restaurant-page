@@ -16,4 +16,6 @@ I've made the face significantly larger and added a 4th side to complete a cube.
 ![Rotating](./screenshots/rotating.png)
 
 ## Technologies Used
-This page was created with just HTML 5, CSS3 and the help of Wedpak to bundle the code into a single file.
+This page was created with JavaScript ES6, HTML 5, and SCSS and the help of Wedpak to bundle the code into a single file.
+For SCSS usage, I used any many of the SASS features as application to keep the code DRY.
+SCSS variables, nesting, @import, @mixin, @extend, calc function were all employed to keep the SCSS structure organized, manageable and easily maintainable.    
