@@ -1,0 +1,35 @@
+.tab {
+  font-weight: 300;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  transition: 100ms; }
+  .tab:nth-child(1) {
+    top: -16px;
+    background: #06D6A0; }
+  .tab:nth-child(2) {
+    top: 54px;
+    background: #6F47EF; }
+  .tab:nth-child(3) {
+    top: 124px;
+    background: #1B9AAA; }
+  .tab:nth-child(4) {
+    top: 194px;
+    background: #EF476F; }
+
+.tab:hover {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.05em;
+  transform: scale(1.01);
+  z-index: 10; }
+
+.tab:active, .selected-tab {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.05em;
+  transform: scale(1.01);
+  z-index: 5; }
