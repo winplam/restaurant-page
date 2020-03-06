@@ -1,0 +1,60 @@
+$font-h1: 'Pacifico', cursive;
+$about-color: #06D6A0;
+$home-color: #6F47EF;
+$menu-color: #1B9AAA;
+$contact-color: #EF476F;
+
+.cube {
+  margin: 60px auto 0;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-origin: 0 250px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+}
+
+.cube-active {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.tab-content {
+  padding: 25px;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+
+  h1 {
+    font-family: $font-h1;
+    font-size: 25px;
+    margin: 0 0 5px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  &:nth-child(1) {
+    transform: rotateX(-270deg) translateY(-250px);
+    transform-origin: top;
+    background: $about-color;
+  }
+
+  &:nth-child(2) {
+    transform: translateZ(250px);
+    background: $home-color;
+  }
+
+  &:nth-child(3) {
+    transform: rotateX(-90deg) translateY(250px);
+    transform-origin: bottom;
+    background: $menu-color;
+  }
+
+  &:nth-child(4) {
+    transform: rotateX(180deg) translateZ(250px);
+    transform-origin: center;
+    background: $contact-color;
+  }
+}

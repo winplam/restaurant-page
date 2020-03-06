@@ -1,0 +1,73 @@
+$tab-color1: #06D6A0;
+$tab-color2: #6F47EF;
+$tab-color3: #1B9AAA;
+$tab-color4: #EF476F;
+$offset: 54;
+$increment: 70;
+@mixin rotate-x-degrees($angle: 0) {
+  transform: rotateX($angle+deg);
+}
+
+.tab {
+  font-weight: 300;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  transition: 550ms;
+
+  &:nth-child(1) {
+    top: -16px;
+    background: $tab-color1;
+  }
+
+  &:nth-child(2) {
+    top: $offset+px;
+    background: $tab-color2;
+  }
+
+  &:nth-child(3) {
+    top: $offset+$increment+px;
+    background: $tab-color3;
+  }
+
+  &:nth-child(4) {
+    top: $offset+2*$increment+px;
+    background: $tab-color4;
+  }
+}
+
+.tab:hover {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  font-size: 1.05em;
+  transform: scale(1.01);
+  z-index: 10;
+}
+
+.tab:active, .selected-tab {
+  @extend .tab:hover;
+  z-index: 5;
+}
+
+#tab-top:checked ~ .cube {
+  @include rotate-x-degrees(-90);
+}
+
+#tab-front:checked ~ .cube {
+  @include rotate-x-degrees;
+}
+
+#tab-bottom:checked ~ .cube {
+  @include rotate-x-degrees(90);
+}
+
+#tab-back:checked ~ .cube {
+  @include rotate-x-degrees(180);
+}
+
+input {
+  display: none;
+}

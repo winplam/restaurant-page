@@ -1,0 +1,40 @@
+img {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#about-img {
+  border: 5px solid #476FEF;
+  margin-top: 15px;
+}
+
+#home-img {
+  margin-top: 20px;
+  border: 5px solid #EF6F47;
+}
+
+.menu-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-img {
+  border: 5px solid #06D6A0;
+}
+
+.menu-img:nth-child(3), .menu-img:last-child {
+  margin-top: 10px;
+}
+
+#contact-page {
+  margin: 0 auto;
+}
+
+.map-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map-img {
+  border: 5px solid #476FEF;
+}

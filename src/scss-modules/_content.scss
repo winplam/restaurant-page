@@ -1,0 +1,46 @@
+$font-stack: 'Roboto', sans-serif;
+$font-color: #fff;
+$main-background-color: #F8FFE5;
+$main-background-image: "../img/restaurant-background.jpg";
+
+// simple css reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $main-background-color url($main-background-image);
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  color: $font-color;
+  font-family: $font-stack;
+  font-weight: 100;
+  height: calc(100vh - 80px);
+  perspective: 1000px;
+  perspective-origin: 50% 50px;
+}
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  // Move to bottom of page
+  position: fixed;
+  bottom: 0;
+  // Center horizontally
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  a {
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+    padding: 5px;
+    background-color: white;
+    text-decoration: none;
+  }
+}
